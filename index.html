@@ -113,9 +113,13 @@ function compare() {
     const typeNumber= document.getElementById("display").value;
     if (generatedDisplayPin===typeNumber) {
         matchingPin('block','none');
+        alert('Correct, try another...')
+        return true;
     }
     else{
         matchingPin('none', 'block');
+        alert('Wrong...!')
+        return false;
     }
 }
 function matchingPin(correctPin, incorrectPin){
